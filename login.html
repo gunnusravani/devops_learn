@@ -1,15 +1,20 @@
+<html>
 <h1> Login Now</h1>
 
 <style>
     h3{
         color:red;
     }
+ .bgcolor
+{background-color:pink;}
 </style>
+<body>
+<div class="bgcolor">
 {% for message in messages %}
 <h3>{{message}}</h3>
 {% endfor %}
 
-<form action="login" method="POST">
+<form action="login" method="POST" >
     {% csrf_token %}
     <p>USername:</p>
     <input type="text" name="username" />
@@ -18,3 +23,6 @@
     <input type="submit" />
 
 </form>
+</div>
+</body>
+</html>
